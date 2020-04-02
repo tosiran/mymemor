@@ -41,7 +41,19 @@
 }
 
 .contents{
+  margin:80px 100px;
   display: flex;
+  &__post{
+    border: solid 1px black;
+    height: 100px;
+    width: 250px;
+    margin-right: 50px;
+    padding: 20px 20px;
+    p{
+      font-weight: bold;
+    }
+
+  }
 
 }
 
