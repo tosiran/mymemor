@@ -1,0 +1,10 @@
+<div class="contents row">
+  <% @memos.each do |memo| %>
+    <div class="content_post">
+      <%= simple_format(memo.text) %>
+      <span class="name">
+        <%= memo.title %>
+      </span>
+    </div>
+  <% end %>
+</div>
