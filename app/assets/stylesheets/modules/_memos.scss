@@ -1,6 +1,6 @@
 .header{
   background-color: rgb(156, 200, 159);
-  height: 60px;
+  height: 70px;
 
   &__bar{
     display: flex;
@@ -52,13 +52,78 @@
     p{
       font-weight: bold;
     }
+  }
+}
 
+.formcontents{
+  background-color:rgb(221, 221, 221);
+  padding: 30px 0px ;
+  .container{
+    
+    background-color: #fff;
+    margin: 0px auto;
+    border: solid 1px black;
+    width: 700px;
+    height: 590px;
+    text-align: center;
+
+
+    position: relative;
+    background: #5fc9c0;
+    box-shadow: 0px 0px 0px 5px #5fc9c0;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
+
+    &:after{
+      position: absolute;
+      content: '';
+      right: -7px;
+      top: -7px;
+      border-width: 0 15px 15px 0;
+      border-style: solid;
+      border-color: #5fc9c0 #fff #5fc9c0;
+      box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+    }
+    
+    h3{
+      text-align: center;
+      font-size: 20px;
+      margin: 20px 0;
+    }
+    input,textarea {
+      width: 80%;
+      border: 1px solid gray;
+      border-radius: 5px;
+      font-family: "游ゴシック", "YuGothic";
+      margin-bottom: 10px;
+      font-size: 25px;
+    }
+    input[type="submit"] {
+      background-color: rgb(19, 109, 170);
+      border-radius: 20px;
+      color: #fff;
+      border: 0;
+      font-size: 30px;
+      
+      &:hover {
+        background-color: lighten(rgb(54, 98, 155), 10%);
+      }
+    }
+
+
+    
+    
+    
   }
 
 }
 
 
 footer{
+  background-color:rgb(156, 200, 159) ;
+  height: 60px;
+  line-height: 60px;
   p{
     text-align: center;
     font-family: 'Rock Salt', cursive;
