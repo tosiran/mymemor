@@ -1,9 +1,9 @@
 <div class="contents">
   <% @memos.each do |memo| %>
     <div class="contents__post">
-      <%= simple_format(memo.text) %>
+      <%= simple_format(memo.title) %>
       <span class="name">
-        <%= memo.title %>
+        <%= memo.text %>
       </span>
     </div>
   <% end %>
