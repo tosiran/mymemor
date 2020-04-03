@@ -25,9 +25,19 @@
     <header class="header">
       <div class="header__bar">
         <h1 class="header__bar__logo"><a href="/">Mymemo</a></h1>
-        <div class="user_nav">
-          <a class="post" href="/memos/new">記録する</a>
-        </div>
+
+        <% if user_signed_in? %>
+          <div class="user_nav">
+            <%= link_to  "記録する", "/memos/new", class: "posts" %>
+            <%= link_to "ログアウト", destroy_user_session_path, class: "post", method: :delete %>
+          </div>
+        <% else %>
+          <div class="user_nav">
+            <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+            <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+          </div>
+        <% end %>
+        
       </div>
     </header>
 

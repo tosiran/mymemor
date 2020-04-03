@@ -4,8 +4,9 @@
 
   &__bar{
     display: flex;
-    justify-content: space-between;
+    
     &__logo{
+      margin-right: auto;
       margin-left: 100px;
       line-height: 60px;
       font-size: 30px;
@@ -20,10 +21,26 @@
       }
     }
     .user_nav{
-      margin-right: 100px;
-      line-height: 60px;
+
+      line-height: 70px;
+      .posts{
+        text-decoration: none;
+        margin-right: 20px;
+
+        border-radius: 3px;
+        transition: .4s;
+        font-size: 15px;
+        padding: 10px 20px;
+        font-weight: bold;
+        color: black;
+        background-image: linear-gradient(45deg, #d9ff70 0%, #a7f517 100%);
+        &:hover {
+          background-image: linear-gradient(45deg, #d9ff70 50%, #a7f517 100%);
+        }
+      }
       .post{
         text-decoration: none;
+        margin-right: 20px;
 
         border-radius: 3px;
         transition: .4s;
