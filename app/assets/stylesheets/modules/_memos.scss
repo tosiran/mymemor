@@ -1,5 +1,5 @@
 .header{
-  background-color: rgb(156, 200, 159);
+  background-color: rgb(6, 8, 6);
   height: 70px;
 
   &__bar{
@@ -30,37 +30,44 @@
         font-size: 15px;
         padding: 10px 20px;
         font-weight: bold;
-        color: #FFF;
-        background-image: linear-gradient(45deg, #709dff 0%, #b0c9ff 100%);
+        color: black;
+        background-image: linear-gradient(45deg, #ffa470 0%, #f16b1e 100%);
         &:hover {
-          background-image: linear-gradient(45deg, #709dff 50%, #b0c9ff 100%);
+          background-image: linear-gradient(45deg, #ffa470 50%, #f16b1e 100%);
         }
       }
     }  
   }
 }
 
-.contents{
-  margin:80px 100px;
-  display: flex;
-  &__post{
-    border: solid 1px black;
-    height: 100px;
-    width: 250px;
-    margin-right: 50px;
-    padding: 20px 20px;
-    p{
-      font-weight: bold;
+.maincontent{
+  background-color: #454545;
+  .contents{
+    padding: 80px 100px;
+    display: flex;
+    background-color: #454545;
+
+    
+    &__post{
+      border: solid 1px black;
+      background-color: #fff;
+      height: 100px;
+      width: 250px;
+      margin-right: 50px;
+      padding: 20px 20px;
+      p{
+        font-weight: bold;
+      }
     }
   }
 }
 
 .formcontents{
-  background-color:rgb(221, 221, 221);
+  background-color:rgba(100, 98, 98, 0.376);
   padding: 30px 0px ;
   .container{
     
-    background-color: #fff;
+    background-color: rgb(134, 131, 131);
     margin: 0px auto;
     border: solid 1px black;
     width: 700px;
@@ -68,12 +75,13 @@
     text-align: center;
 
 
+
     position: relative;
-    background: #5fc9c0;
-    box-shadow: 0px 0px 0px 5px #5fc9c0;
+    background: #41403f;
+    box-shadow: 0px 0px 0px 5px #c9895f;
     border: dashed 2px white;
     padding: 0.2em 0.5em;
-    color: #454545;
+    color: white;
 
     &:after{
       position: absolute;
@@ -82,7 +90,7 @@
       top: -7px;
       border-width: 0 15px 15px 0;
       border-style: solid;
-      border-color: #5fc9c0 #fff #5fc9c0;
+      border-color: #c9895f #fff #c9895f;
       box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
     }
     
@@ -100,14 +108,14 @@
       font-size: 25px;
     }
     input[type="submit"] {
-      background-color: rgb(19, 109, 170);
+      background-color: #f16b1e;
       border-radius: 20px;
-      color: #fff;
+      color: black;
       border: 0;
       font-size: 30px;
       
       &:hover {
-        background-color: lighten(rgb(54, 98, 155), 10%);
+        background-color: lighten(#f16b1e, 10%);
       }
     }
 
@@ -116,12 +124,58 @@
     
     
   }
+  .showcontainer{
+    background-color: rgb(134, 131, 131);
+    margin: 0px auto;
+    border: solid 1px black;
+    width: 700px;
+    height: 590px;
+    position: relative;
+    background: #41403f;
+    box-shadow: 0px 0px 0px 5px #c9895f;
+    padding: 0.2em 0.5em;
+    color: white;
+    &__top{
+      display: flex;
+      justify-content: space-between;
+      .memoTitle{
+        
+        
+        
+        padding: 20px 10px;
+        font-size: 20px;  
+      }
+      .icon{
+        float: right;
+        padding: 20px 20px;
+        .memoManage{
+          border: solid 1px green;
+          border-radius: 10px;
+          background-color: green;
+          color: #fff;
+          padding: 10px 20px;
+          text-decoration: none;
+        }
+
+      }
+    }
+    
+
+    .memoDate{
+      padding-left: 10px;
+      font-size: 15px;
+    }
+    .memoText{
+      padding: 20px 10px;
+    }
+
+  }
 
 }
 
 
 footer{
-  background-color:rgb(156, 200, 159) ;
+  background-color:rgb(10, 10, 10) ;
   height: 60px;
   line-height: 60px;
   p{

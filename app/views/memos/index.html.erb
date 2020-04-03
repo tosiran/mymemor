@@ -1,10 +1,14 @@
+<div class="maincontent">
 <div class="contents">
   <% @memos.each do |memo| %>
     <div class="contents__post">
-      <%= simple_format(memo.title) %>
+      <%= link_to memo.title, memo_path(memo.id), class: "content__right__top--title" %>
+
+     
       <span class="name">
         <%= memo.text %>
       </span>
     </div>
   <% end %>
+</div>
 </div>

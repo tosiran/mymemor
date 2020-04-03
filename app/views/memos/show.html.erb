@@ -1,0 +1,21 @@
+<div class="formcontents">
+  <div class="showcontainer">
+    <div class="showcontainer__top">
+      <div class="memoTitle">
+        <%= @memo.title %>
+      </div>
+      <div class="icon">
+        <%= link_to "編集", edit_memo_path(@memo.id), class: "memoManage" %>
+      </div>
+    </div>
+    <div class="memoDate">
+      <%= @memo.created_at %>
+    </div>
+    <div class="memoAuthor">
+
+    </div>
+    <div class="memoText">
+      <%= simple_format @memo.text %>
+    </div>
+  </div>  
+</div>
