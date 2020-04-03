@@ -1,4 +1,7 @@
 class MemosController < ApplicationController
+
+  before_action :move_to_index, except: [:index, :show]
+
   def index
     @memos = Memo.all
   end
@@ -34,7 +37,11 @@ class MemosController < ApplicationController
   
   private
   def memo_params
-    params.require(:memo).permit(:title, :text)
+    params.require(:memo).permit(:title, :text, :url)
     
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 end

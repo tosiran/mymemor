@@ -5,6 +5,7 @@
         メモ作成画面
       </h3>
       <%= form.text_field :title, placeholder: "title" %>
+      <%= form.text_field :url, placeholder: "url" %>
       <%= form.text_area :text, placeholder: "text" , rows: "10" %>
       <%= form.submit "保存する" %>
     <% end %>

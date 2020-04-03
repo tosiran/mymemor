@@ -2,12 +2,10 @@
 <div class="contents">
   <% @memos.each do |memo| %>
     <div class="contents__post">
-      <%= link_to memo.title, memo_path(memo.id), class: "content__right__top--title" %>
+      <%= link_to memo.title, memo_path(memo.id), class: "contents__post__title" %>
 
      
-      <span class="name">
-        <%= memo.text %>
-      </span>
+     
     </div>
   <% end %>
 </div>

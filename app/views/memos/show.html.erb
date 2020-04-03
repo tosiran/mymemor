@@ -14,7 +14,7 @@
       <%= @memo.created_at %>
     </div>
     <div class="memoAuthor">
-
+    　<%= text_url_to_link(h(URLテキストの変数)).html_safe %>
     </div>
     <div class="memoText">
       <%= simple_format @memo.text %>
