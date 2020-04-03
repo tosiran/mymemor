@@ -5,7 +5,9 @@
         <%= @memo.title %>
       </div>
       <div class="icon">
-        <%= link_to "編集", edit_memo_path(@memo.id), class: "memoManage" %>
+        <%= link_to "編集", edit_memo_path(@memo.id), class: "manage" %>
+        <%= link_to "削除", memo_path(@memo.id), method: :delete, class: "delete" %>
+
       </div>
     </div>
     <div class="memoDate">
