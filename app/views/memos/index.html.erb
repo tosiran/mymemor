@@ -1,12 +1,10 @@
 <div class="maincontent">
 <div class="contents">
   <% @memos.each do |memo| %>
-    <div class="contents__post">
-      <%= link_to memo.title, memo_path(memo.id), class: "contents__post__title" %>
-
+    <%= link_to memo.title, memo_path(memo.id), class: "contents__post" %>
      
      
-    </div>
+    
   <% end %>
 </div>
 </div>

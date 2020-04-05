@@ -67,6 +67,7 @@
   .contents{
     padding: 80px 100px;
     display: flex;
+    flex-wrap: wrap;
     background-color: #454545;
 
     
@@ -74,20 +75,21 @@
       border: solid 1px black;
       background-color: #fff;
       height: 40px;
-      width: 250px;
+      display:inline;
+      width: 200px;
+      border: solid 0px #000000;
+      table-layout: fixed;
+      word-wrap: break-word;
+      margin-bottom: 50px;
       border-radius: 50%;
       margin-right: 50px;
       padding: 20px 20px;
       text-align: center;
-      &__title{
-        font-weight: bold;
-        font-size: 20px;
-        text-decoration: none;
-        color: #000;
-      }
-      p{
-        font-weight: bold;
-      }
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+      color: #000;
+    
     }
   }
 }
@@ -222,14 +224,21 @@
       }
     }
     .memoDate{
-      padding-left: 10px;
+      padding-left: 17px;
       font-size: 12px;
     }
     .memoText{
-      padding: 20px 10px;
+      padding: 20px 17px;
     }
     .memoAuthor{
-      padding: 20px 10px;
+      padding: 10px 0;
+      font-weight: bold;
+      a{
+        color: red;
+      }
+      a:hover{
+        color:white;
+      }
     }
   }
 }
