@@ -8,6 +8,7 @@ class MemosController < ApplicationController
 
   def new
     @memo = Memo.new
+
     
   end
 
@@ -18,7 +19,13 @@ class MemosController < ApplicationController
   def update
     memo = Memo.find(params[:id])
     memo.update(memo_params)
-    redirect_to memo_path(memo.id)
+    @memo = Memo.create(title: memo_params[:title],  text: memo_params[:text], user_id: current_user.id)
+    if @memo.save
+      redirect_to memo_path(memo.id), notice: '編集しました！'
+    else
+      flash.now[:notice] = '編集に失敗しました.....'
+      render :new
+    end
   end
 
   def destroy
@@ -29,6 +36,13 @@ class MemosController < ApplicationController
 
   def create
     Memo.create(memo_params)
+    @memo = Memo.create(title: memo_params[:title],  text: memo_params[:text], user_id: current_user.id)
+    if @memo.save
+      redirect_to root_path, notice: '投稿に成功しました！'
+    else
+      flash.now[:notice] = '投稿に失敗しました.....'
+      render :new
+    end
   end
 
   def show
@@ -42,7 +56,7 @@ class MemosController < ApplicationController
 
   private
   def memo_params
-    params.require(:memo).permit(:title, :text, :url)
+    params.require(:memo).permit(:title, :text, :url).merge(user_id: current_user.id)
     
   end
 

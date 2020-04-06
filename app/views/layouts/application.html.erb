@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>Mymemo</title>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
     <script type="text/javascript">
       WebFontConfig = {
@@ -23,6 +23,7 @@
 
   <body>
     <header class="header">
+      <%= render 'layouts/notifications' %>
       <div class="header__bar">
         <h1 class="header__bar__logo"><a href="/">Mymemo</a></h1>
 
@@ -32,7 +33,7 @@
                 <li>
                   <span><%= current_user.nickname %></span>
                   <%= link_to  "記録する", "/memos/new", class: "posts" %>
-                  <%= link_to "マイページ", "/users/#{current_user.id}", class: "post" %>
+                  <%= link_to "みんなの記録", "/users/#{current_user.id}", class: "post" %>
                   <%= link_to "ログアウト", destroy_user_session_path, class: "post", method: :delete %>
                 </li>
               </ul>
@@ -46,7 +47,6 @@
         
       </div>
     </header>
-
     <%= yield %>
 
     <footer>

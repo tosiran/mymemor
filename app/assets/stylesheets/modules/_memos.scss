@@ -63,15 +63,13 @@
 
 .maincontent{
   background-color: #454545;
-  height: 660px;
+  height: 100vh;
   .search{
     float: left;
     margin: 30px 20px;
     .fa{
       height: 30px;
-      border-radius: 5px;
-  
-     
+      border-radius: 5px;     
     }
     .search-btn{
       width: 50px;
@@ -80,14 +78,13 @@
       border-radius: 5px;
       background-color: mediumaquamarine;
     }
-
-    
   }
   .contents{
     padding: 80px 100px;
     display: flex;
     flex-wrap: wrap;
     background-color: #454545;
+   
 
     
     &__post{
@@ -118,19 +115,37 @@
   background-color:rgba(100, 98, 98, 0.376);
   padding: 30px 0px ;
   .container{
+    .new_user{
+      .field{
+        margin-bottom: 20px;
+        label[for="user_email"]{
+          padding-right: 450px;
+        }
+        label[for="user_password"]{
+          padding-right:370px ;
+        }
+        label[for="user_password_confirmation"]{
+          padding-right:430px ;
+        }
+        label[for="user_password_confirmation"]{
+          padding-right:430px ;
+        }
+        label[for="user_user"]{
+          padding-right:390px ;
+        }
+
+      }
+    }
+    
     h2{
       margin: 20px 0;
       font-size: 30px;
     }
-    .field{
-      label{
-        text-align: left;
-
-      }
+    
       input,textarea{
         margin-bottom: 30px;
       }
-    }
+    
     background-color: rgb(134, 131, 131);
     margin: 0px auto;
     border: solid 1px black;

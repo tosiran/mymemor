@@ -6,6 +6,8 @@ class Memo < ApplicationRecord
     Memo.where('title LIKE(?)', "%#{search}%")
   end
 
+  belongs_to :user
+
   # 上記と同じ
   # def self.search(search)
   #   if search
