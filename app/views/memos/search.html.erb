@@ -3,10 +3,9 @@
     <%= form.text_field :keyword, placeholder: " \uf002 seach", class: "fa" %>
     <%= form.submit "検索", class: "search-btn" %>
   <% end %>
-<div class="contents">
-  <% @memos.each do |memo| %>
-    <%= render partial: "memo", locals: { memo: memo } %>
-
-  <% end %>
-</div>
+  <div class="contents">
+    <% @memos.each do |memo| %>
+      <%= render partial: "memo", locals: { memo: memo } %>
+    <% end %>
+  </div>
 </div>
