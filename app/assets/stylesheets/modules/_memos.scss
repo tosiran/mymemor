@@ -64,6 +64,25 @@
 .maincontent{
   background-color: #454545;
   height: 660px;
+  .search{
+    float: left;
+    margin: 30px 20px;
+    .fa{
+      height: 30px;
+      border-radius: 5px;
+  
+     
+    }
+    .search-btn{
+      width: 50px;
+      border-style: none;
+      padding: 4px;
+      border-radius: 5px;
+      background-color: mediumaquamarine;
+    }
+
+    
+  }
   .contents{
     padding: 80px 100px;
     display: flex;

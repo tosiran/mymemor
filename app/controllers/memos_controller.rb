@@ -1,6 +1,6 @@
 class MemosController < ApplicationController
 
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     @memos = Memo.all
@@ -35,6 +35,11 @@ class MemosController < ApplicationController
     @memo = Memo.find(params[:id])
   end
   
+  def search
+    @memos = Memo.search(params[:keyword])
+  end
+
+
   private
   def memo_params
     params.require(:memo).permit(:title, :text, :url)
