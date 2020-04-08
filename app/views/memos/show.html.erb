@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="memoDate">
-      <%= @memo.created_at %>
+      <%= @memo.created_at.to_s(:datetime_jp) %>
     </div>
     <div class="memoAuthor">
     　<%= text_url_to_link(h(@memo.url)).html_safe %>

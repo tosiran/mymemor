@@ -1,5 +1,5 @@
 class Memo < ApplicationRecord
-  validates :text,:title, presence: true
+  validates :text, presence: true
   
   def self.search(search)
     return Memo.all unless search

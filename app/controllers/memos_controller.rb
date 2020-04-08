@@ -19,7 +19,6 @@ class MemosController < ApplicationController
   def update
     memo = Memo.find(params[:id])
     memo.update(memo_params)
-    @memo = Memo.create(title: memo_params[:title],  text: memo_params[:text], user_id: current_user.id)
     if @memo.save
       redirect_to memo_path(memo.id), notice: '編集しました！'
     else
@@ -35,7 +34,6 @@ class MemosController < ApplicationController
   end
 
   def create
-    Memo.create(memo_params)
     @memo = Memo.create(title: memo_params[:title],  text: memo_params[:text], user_id: current_user.id)
     if @memo.save
       redirect_to root_path, notice: '投稿に成功しました！'
