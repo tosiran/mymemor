@@ -30,13 +30,13 @@ class MemosController < ApplicationController
   def destroy
     memo = Memo.find(params[:id])
     memo.destroy
-    redirect_to root_path
+    redirect_to "/users/#{current_user.id}",notice: '削除しました！'
   end
 
   def create
-    @memo = Memo.create(title: memo_params[:title],  text: memo_params[:text], user_id: current_user.id)
+    @memo = Memo.create(title: memo_params[:title],url: memo_params[:url],  text: memo_params[:text], user_id: current_user.id)
     if @memo.save
-      redirect_to root_path, notice: '投稿に成功しました！'
+      redirect_to "/users/#{current_user.id}", notice: '投稿に成功しました！'
     else
       flash.now[:notice] = '投稿に失敗しました.....'
       render :new
