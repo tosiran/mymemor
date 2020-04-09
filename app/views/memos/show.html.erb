@@ -4,11 +4,14 @@
       <div class="memoTitle">
         <%= @memo.title %>
       </div>
-      <div class="icon">
-        <%= link_to "編集", edit_memo_path(@memo.id), class: "manage" %>
-        <%= link_to "削除", memo_path(@memo.id), method: :delete, class: "delete" %>
+      <% if user_signed_in? && current_user.id == @memo.user_id %>
 
-      </div>
+        <div class="icon">
+          <%= link_to "編集", edit_memo_path(@memo.id), class: "manage" %>
+          <%= link_to "削除", memo_path(@memo.id), method: :delete, class: "delete" %>
+        </div>
+      <% end %>
+
     </div>
     <div class="memoDate">
       <%= @memo.created_at.to_s(:datetime_jp) %>

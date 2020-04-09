@@ -5,6 +5,7 @@
     </h3>
     <%= form_with model: @memo, class: :form, local: true do |form| %>
       <%= form.text_field :title, placeholder: :タイトル, class: :form__title %>
+      <%= form.text_field :url, placeholder: "url" %>
       <%= form.text_area :text, placeholder: :テキスト, class: :form__text %>
       <%= form.submit '編集する', class: :form__btn %>
     <% end %>

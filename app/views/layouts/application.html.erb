@@ -31,9 +31,10 @@
           <div class="user_nav">
               <ul class="user__info">
                 <li>
-                  <span><%= current_user.nickname %></span>
+                  <span class="name"><%= current_user.nickname %></span>
                   <%= link_to  "記録する", "/memos/new", class: "posts" %>
-                  <%= link_to "みんなの記録", "/users/#{current_user.id}", class: "post" %>
+                  <%= link_to "自分のメモ", "/users/#{current_user.id}", class: "post" %>
+                  <%= link_to "みんなのメモ", memos_path, class: "post" %>
                   <%= link_to "ログアウト", destroy_user_session_path, class: "post", method: :delete %>
                 </li>
               </ul>
