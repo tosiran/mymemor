@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: :show
 
+  post   '/like/:memo_id' => 'likes#like',   as: 'like'
+  delete '/like/:memo_id' => 'likes#unlike', as: 'unlike'
+
 end

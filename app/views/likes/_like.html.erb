@@ -1,0 +1,11 @@
+<div class="like-link" id="like-link-<%= memo.id %>">
+  <% if current_user.likes.find_by(memo_id: memo.id) %>
+    <%= link_to unlike_path(memo.id), method: :delete, remote: true do %>
+        <div class = "iine__button"><i class="fas fa-thumbs-up"></i><%= memo.likes.count %></div>
+    <% end %>
+  <% else %>
+    <%= link_to like_path(memo.id), method: :post, remote: true do %>
+        <div class = "iine__button"><i class="far fa-thumbs-up"></i><%= memo.likes.count %></div>
+    <% end %>
+  <% end %>
+</div>

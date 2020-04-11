@@ -8,6 +8,9 @@ class Memo < ApplicationRecord
 
   belongs_to :user
 
+  has_many :likes, dependent: :destroy
+  has_many :liking_users, through: :likes, source: :user
+
   # 上記と同じ
   # def self.search(search)
   #   if search
