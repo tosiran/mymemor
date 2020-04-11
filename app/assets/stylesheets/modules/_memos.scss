@@ -98,7 +98,7 @@ body {
     padding: 20px;
   }
   .contents{
-    padding: 40px 100px;
+    padding: 40px 10px;
     display: flex;
     flex-wrap: wrap;
     background-color: #454545;
@@ -113,7 +113,27 @@ body {
       word-wrap: break-word;
       margin-bottom: 50px;
       border-radius: 10px;
+      padding: 20px 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+      color: #000;
+      
+      box-shadow: 20px 0px 0 0px #a5af18 inset
+    }
+    &__postd{
+      border: solid 1px black;
+      background-color: #fff;
+      height: 40px;
+      display:inline;
+      width: 200px;
+      border: solid 0px #000000;
+      table-layout: fixed;
+      word-wrap: break-word;
+      margin-bottom: 50px;
       margin-right: 50px;
+      border-radius: 10px;
       padding: 20px 20px;
       text-align: center;
       font-weight: bold;
@@ -121,13 +141,24 @@ body {
       text-decoration: none;
       color: #000;
       box-shadow: 20px 0px 0 0px #a5af18 inset
+    }
+    li{
+      position: relative;
+      display: block;
+      cursor: pointer;
+      }
+    .drop{
+      display: none;
+
+    }
+    
 
       
       
     
     }
-  }
 }
+
 
 // メモ作成画面
 .formcontents{

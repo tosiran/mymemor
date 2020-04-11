@@ -5,8 +5,8 @@
   <% end %>
     <div class="contents">
       <% @memos.each do |memo| %>
-        <%= render partial: "memo", locals: { memo: memo } %>
-
+      <%= render partial: "memo", locals: { memo: memo } %>
+        <%# <%= render partial: 'memos/memos', collection: @memos, as: :memo %>
       <% end %>
     </div>
 </div>
