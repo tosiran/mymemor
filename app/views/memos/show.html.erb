@@ -18,9 +18,7 @@
       <%= @memo.created_at.to_s(:datetime_jp) %>
     </div>
     <div class="memoAuthor">
-    　<%= text_url_to_link(h(@memo.url)).html_safe do%>
-      <i class="fa fa-search search-btn"></i>
-      <% end %>
+      <%= text_url_to_link(h(@memo.url)).html_safe %>
 
     </div>
     <div class="memoText">

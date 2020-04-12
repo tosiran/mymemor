@@ -1,9 +1,4 @@
-  <ul class="contents__post">
-    <li><%= link_to memo.title, memo_path(memo.id) %>
-      <ul class="drop">
-        <li><%= link_to memo.text, memo_path(memo.id) %></li>
-      </ul>
-    </li>
-  </ul>
-
+  <%= link_to memo.title, memo_path(memo.id), class: "contents__post" %>  
+    
+    
   <%= render 'likes/like', memo: memo %>

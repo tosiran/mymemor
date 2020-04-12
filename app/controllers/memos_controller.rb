@@ -17,10 +17,10 @@ class MemosController < ApplicationController
   end
 
   def update
-    memo = Memo.find(params[:id])
-    memo.update(memo_params)
+    @memo = Memo.find(params[:id])
+    @memo.update(memo_params)
     if @memo.save
-      redirect_to memo_path(memo.id), notice: '編集しました！'
+      redirect_to "/users/#{current_user.id}", notice: '編集しました！'
     else
       flash.now[:notice] = '編集に失敗しました.....'
       render :new
