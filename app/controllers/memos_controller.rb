@@ -20,6 +20,7 @@ class MemosController < ApplicationController
     @memo = Memo.find(params[:id])
     @memo.update(memo_params)
     if @memo.save
+      
       redirect_to "/users/#{current_user.id}", notice: '編集しました！'
     else
       flash.now[:notice] = '編集に失敗しました.....'
@@ -49,6 +50,10 @@ class MemosController < ApplicationController
   
   def search
     @memos = Memo.search(params[:keyword])
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
 

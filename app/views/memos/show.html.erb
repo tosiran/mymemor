@@ -8,7 +8,7 @@
 
         <div class="icon">
           <%= link_to "編集", edit_memo_path(@memo.id), class: "manage" %>
-          <%= link_to "削除", memo_path(@memo.id), method: :delete, class: "delete" %>
+          <%= link_to "削除", memo_path(@memo.id), method: :delete, class: "delete",data: {confirm: "本当に削除しますか？"} %>
         </div>
       <% end %>
 
@@ -18,11 +18,13 @@
       <%= @memo.created_at.to_s(:datetime_jp) %>
     </div>
     <div class="memoAuthor">
-      <%= text_url_to_link(h(@memo.url)).html_safe %>
+      <%= text_url_to_link(h(@memo.url)).html_safe  %>
+     
+      
 
     </div>
     <div class="memoText">
-      <%= simple_format @memo.text %>
+      <%= simple_format h @memo.text %>
     </div>
   </div>  
 </div>

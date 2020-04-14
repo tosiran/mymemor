@@ -24,7 +24,7 @@ body {
         color: gray;
         text-decoration: none;
         &:hover {
-          color: orange;
+          color: #a7f517;
         }
         
       }
@@ -61,9 +61,9 @@ body {
         padding: 10px 20px;
         font-weight: bold;
         color: black;
-        background-image: linear-gradient(45deg, #ffa470 0%, #f16b1e 100%);
+        background-image: linear-gradient(45deg, #ececec 0%, #ebebeb 100%);
         &:hover {
-          background-image: linear-gradient(45deg, #ffa470 50%, #f16b1e 100%);
+          background-image: linear-gradient(45deg, #d9ff70 50%, #a7f517 100%);
         }
       }
     }  
@@ -86,16 +86,19 @@ body {
     }
     .search-btn{
       width: 50px;
+      cursor: pointer;
       border-style: none;
       padding: 4px;
       border-radius: 5px;
-      background-color: mediumaquamarine;
+      background-image:linear-gradient(45deg, #d9ff70 0%, #a7f517 100%);
+      
     }
   }
   h3{
-    font-size: 20px;
-    color: mintcream;
+    font-size: 30px;
+    color: rgb(204, 204, 204);
     padding: 20px;
+    text-align: center;
   }
   .contents{
     padding: 40px 10px;
@@ -107,7 +110,7 @@ body {
       background-color: #fff;
       height: 40px;
       display:inline;
-      width: 200px;
+      width: 250px;
       border: solid 0px #000000;
       table-layout: fixed;
       word-wrap: break-word;
@@ -120,14 +123,14 @@ body {
       text-decoration: none;
       color: #000;
       
-      box-shadow: 20px 0px 0 0px #a5af18 inset
+      box-shadow: 20px 0px 0 0px #aaaaa8 inset
     }
     &__postd{
       border: solid 1px black;
       background-color: #fff;
       height: 40px;
       display:inline;
-      width: 200px;
+      width: 250px;
       border: solid 0px #000000;
       table-layout: fixed;
       word-wrap: break-word;
@@ -140,13 +143,8 @@ body {
       font-size: 20px;
       text-decoration: none;
       color: #000;
-      box-shadow: 20px 0px 0 0px #a5af18 inset
-    }
-  
-    
-
-      
-      
+      box-shadow: 20px 0px 0 0px #aaaaa8 inset
+    }   
     
     }
 }
@@ -273,7 +271,7 @@ body {
     height: 590px;
     position: relative;
     background: #41403f;
-    box-shadow: 0px 0px 0px 5px #c9895f;
+    box-shadow: 0px 0px 0px 5px gainsboro;
     padding: 0.2em 0.5em;
     color: white;
     &__top{
@@ -281,47 +279,60 @@ body {
       justify-content: space-between;
       .memoTitle{
         padding: 20px 10px;
-        font-size: 30px;  
+        font-size: 25px;  
         font-weight: bold;
+        width: 450px;
+      
+
       }
       .icon{
         float: right;
         padding: 20px 20px;
         .manage{
-          border: solid 1px green;
           border-radius: 10px;
-          background-color: green;
-          color: #fff;
+          color: black;
           padding: 10px 20px;
           text-decoration: none;
+          background-image: linear-gradient(45deg, #ececec 0%, #ebebeb 100%);
+          &:hover {
+            background-image: linear-gradient(45deg, #d9ff70 50%, #a7f517 100%);
+          }
         }
+        
         .delete{
-          border: solid 1px green;
           border-radius: 10px;
-          background-color: green;
-          color: #fff;
+          color: black;
           padding: 10px 20px;
           text-decoration: none;
-          
+          background-image: linear-gradient(45deg, #ececec 0%, #ebebeb 100%);
+          &:hover {
+            background-image: linear-gradient(45deg, #d9ff70 50%, #a7f517 100%);
+          }
         }
+        
       }
     }
     .memoDate{
       padding-left: 17px;
       font-size: 12px;
+
     }
     .memoText{
       padding: 20px 17px;
       box-shadow:0 0 8px  midnightblue;
       width: 600px;
       height: 370px;
+      word-wrap: break-word;
+
       margin-left: 17px;
     }
     .memoAuthor{
-      padding: 10px 0;
+      margin:5px 20px;
+      word-wrap: break-word;
+
       font-weight: bold;
       a{
-        color: red;
+        color: rgb(179, 255, 0);
       }
       a:hover{
         color:white;

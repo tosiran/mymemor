@@ -1,10 +1,10 @@
 <div class="maincontent">
   <%= form_with(url: search_memos_path, local: true, method: :get, class: "search") do |form| %>
-    <%= form.text_field :keyword, placeholder: " \uf002 seach", class: "fa" %>
+    <%= form.text_field :keyword, placeholder: " \uf002 search", class: "fa" %>
     <%= form.submit "検索", class: "search-btn" %>
   <% end %>
 
-<h3><%= @nickname %>さんのメモ一覧</h3>
+<h3>自分のメモ一覧</h3>
 <div class="contents">
 
     <% @memos.each do |memo| %>
