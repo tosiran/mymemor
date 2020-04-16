@@ -47,8 +47,13 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: mymemor_production
+#   username: mymemor
+#   password: <%= ENV['MYMEMOR_DATABASE_PASSWORD'] %>
 production:
   <<: *default
-  database: mymemor_production
-  username: mymemor
-  password: <%= ENV['MYMEMOR_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
