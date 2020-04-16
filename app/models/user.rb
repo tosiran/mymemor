@@ -7,4 +7,7 @@ class User < ApplicationRecord
 
   has_many :likes, dependent: :destroy
   has_many :like_memos, through: :likes, source: :memo
+
+  validates :nickname, presence: true, length: { maximum: 8 }
+
 end
