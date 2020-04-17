@@ -4,22 +4,8 @@ $(function() {
 
   function appendMemo(memo) {
 
-    var html = `<a class="contents__post" href="memo_path(memo.id)">${memo.title}</a>
+    var html = `<a class="contents__post" href="memo_path(memo.id)">${memo.title}</a>`
     
-    <div class="like-link" id="like-link-${memo.id}">
-    if(current_user.likes.find_by(memo_id: ${memo.id})){
-
-      <a data-remote="true" rel="nofollow" data-method="delete" href="unlike_path(memo.id)"></a>
-      <div class="iine__button">
-      <i class="fas fa-thumbs-up"></i>${memo.likes_count}</div>
-    } 
-    else {
-      <a data-remote="true" rel="nofollow" data-method="post" href="like_path(memo.id)"></a>
-      <div class="iine__button">
-      <i class="far fa-thumbs-up"></i>${memo.likes_count}</div>
-    }
-    </div> `
-
     search_list.append(html);
    }
 
