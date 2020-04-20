@@ -5,26 +5,27 @@ $(function() {
   function appendMemo(memo) {
 
   
-    var like = `<div class="like-link" id="like-link-${memo.id}">
+    // var like = `<div class="like-link" id="like-link-${memo.id}">
             
-                <a data-remote="true" rel="nofollow" data-method="delete" href="/like/${memo.id}">
-                <div class="iine__button">
-                <i class="fas fa-thumbs-up"></i>${memo.likes}
-                </div>
-                </a>
+    //             <a data-remote="true" rel="nofollow" data-method="delete" href="/like/${memo.id}">
+    //             <div class="iine__button">
+    //             <i class="fas fa-thumbs-up"></i>${memo.likes}
+    //             </div>
+    //             </a>
                 
 
-                <a data-remote="true" rel="nofollow" data-method="post" href="/like/${memo.id}">
-                <div class="iine__button">
-                <i class="far fa-thumbs-up"></i>${memo.likes}
-                </div>
-                </a>
-                </div>
+    //             <a data-remote="true" rel="nofollow" data-method="post" href="/like/${memo.id}">
+    //             <div class="iine__button">
+    //             <i class="far fa-thumbs-up"></i>${memo.likes}
+    //             </div>
+    //             </a>
+    //             </div>
+    //             ${like}
 
-                `
+    //             `
 
     var html = `<a class="contents__post" href="/memos/${memo.id}">${memo.title}</a>
-    ${like}
+    
     `
     search_list.append(html);
    }
