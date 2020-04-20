@@ -1,2 +1,4 @@
-  <%= link_to memo.title, memo_path(memo.id), class: "contents__post" %>  
-  <%= render 'likes/like', memo: memo %>
+  <div class="setcontent">
+    <%= link_to memo.title, memo_path(memo.id), class: "contents__post" %>  
+    <%= render 'likes/like', memo: memo %>
+  </div>

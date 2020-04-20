@@ -101,7 +101,11 @@ body {
     text-align: center;
   }
   .contents{
-    padding: 40px 10px;
+    .setcontent{
+      display: flex;
+    }
+
+    padding: 40px 50px;
     display: flex;
     flex-wrap: wrap;
     background-color: #454545;
@@ -110,20 +114,20 @@ body {
       background-color: #fff;
       height: 40px;
       display:inline;
-      width: 250px;
+      width: 200px;
       border: solid 0px #000000;
-      table-layout: fixed;
-      word-wrap: break-word;
+      word-wrap: break-all;
       margin-bottom: 50px;
+      
       border-radius: 10px;
       padding: 20px 20px;
       text-align: center;
       font-weight: bold;
+      margin-right: 20px;
       font-size: 20px;
       text-decoration: none;
       color: #000;
       
-      box-shadow: 20px 0px 0 0px #aaaaa8 inset
     }
     &__postd{
       border: solid 1px black;
@@ -143,7 +147,6 @@ body {
       font-size: 20px;
       text-decoration: none;
       color: #000;
-      box-shadow: 20px 0px 0 0px #aaaaa8 inset
     }   
     
     }
@@ -156,8 +159,10 @@ body {
   padding: 30px 0px ;
   .container{
     .new_user{
+      padding-top: 50px;
       .field{
         margin-bottom: 20px;
+        margin-top:20px;
         label[for="user_email"]{
           padding-right: 450px;
         }
@@ -186,9 +191,9 @@ body {
     }
     
       input,textarea{
+        
         margin-bottom: 30px;
       }
-    
     background-color: rgb(134, 131, 131);
     margin: 0px auto;
     border: solid 1px black;
@@ -197,8 +202,8 @@ body {
     text-align: center;
     position: relative;
     background: #41403f;
-    box-shadow: 0px 0px 0px 5px #c9895f;
-    border: dashed 2px white;
+    box-shadow: 0px 0px 0px 5px gainsboro;
+    
     padding: 0.2em 0.5em;
     color: white;
 
@@ -207,9 +212,9 @@ body {
       content: '';
       right: -7px;
       top: -7px;
-      border-width: 0 15px 15px 0;
+      border-width: 0 35px 35px 0;
       border-style: solid;
-      border-color: #c9895f #fff #c9895f;
+      border-color:gainsboro #a7f517 gainsboro;
       box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
     }
     
@@ -252,14 +257,16 @@ body {
     }   
     
     input[type="submit"] {
-      background-color: #f16b1e;
+      margin-top: 20px;
+ 
       border-radius: 20px;
       color: black;
       border: 0;
       font-size: 30px;
       
+      background-color:#a7f517;
       &:hover {
-        background-color: lighten(#f16b1e, 10%);
+      background-color:#c6f76b;
       }
     }
   }

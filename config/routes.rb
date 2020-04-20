@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'top#index'
   
   resources :memos, only: [:index, :new, :show, :create, :edit, :update, :destroy] do
     collection do
-      get 'search'
+      get :search
     end
   end
   
-  devise_for :users
   resources :users, only: :show
 
   post   '/like/:memo_id' => 'likes#like',   as: 'like'

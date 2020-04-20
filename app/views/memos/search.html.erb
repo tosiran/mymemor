@@ -3,9 +3,17 @@
     <%= form.text_field :keyword, placeholder: " \uf002 seach", class: "fa" %>
     <%= form.submit "検索", class: "search-btn" %>
   <% end %>
+  <h3>みんなのメモ一覧</h3>
   <div class="contents">
+
     <% @memos.each do |memo| %>
-      <%= render partial: "memo", locals: { memo: memo } %>
+      <%= link_to memo.title, memo_path(memo.id), class: "contents__postd" %>
+  
     <% end %>
   </div>
+  <%# <div class="contents">
+    <% @memos.each do |memo| %>
+      <%# <%= render partial: "memo", locals: { memo: memo } %>
+    <%# <% end %>
+  <%# </div> %>
 </div>
