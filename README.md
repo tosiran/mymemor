@@ -1,24 +1,29 @@
-# README
+# Mymemo
+ブックマーク管理とメモ帳が同時に使える
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 簡単な説明
 
-Things you may want to cover:
+よく使うWebページを保存したり、また見たいWebページを保存出来る。
+また、メモ帳として記録を残すことが出来る。
 
-* Ruby version
+# サイトURL
+https://mymemor.herokuapp.com/
 
-* System dependencies
+# 機能一覧
 
-* Configuration
+- インクリメンタルサーチ）
+- いいね機能
+- 投稿機能
+- ログイン機能
+- フラッシュメッセージ
 
-* Database creation
+# 使用技術
+- mysql2 (0.5.3)
+- rails (5.2.4.2)
+- ruby (2.5.1)
+- デプロイ heroku
 
-* Database initialization
+# 作者
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[@tosiran10162](https://twitter.com/tosiran10162)
+mail to: t73.matsushita.toshinao@gmail.com
