@@ -21,11 +21,11 @@ ActiveRecord::Schema.define(version: 2020_04_09_142040) do
 
   create_table "memos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
+    t.string "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "url"
     t.integer "user_id"
-    t.text "text"
     t.integer "likes_count"
     t.index ["title"], name: "index_memos_on_title", length: 32
   end
