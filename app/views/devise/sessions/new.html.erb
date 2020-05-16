@@ -1,15 +1,16 @@
 <div class="formcontents">
   <div class="container">
-   
+   <h3>下記の「専用ログイン」ボタンを押していただければ、<br>すぐに専用アカウントでログインが可能です。
+
     <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <div class="field">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
+        <%= f.email_field :email, autofocus: true ,value:"test@com"%>
       </div>
 
       <div class="field">
         <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
+        <%= f.password_field :password, autocomplete: "on",value:123456 %>
       </div>
 
       <% if devise_mapping.rememberable? %>
@@ -20,8 +21,14 @@
       <% end -%>
 
       <div class="actions">
-        <%= f.submit "ログイン" %>
+        <%= f.submit "専用ログイン" %>
       </div>
+      <ul>
+        <li>＜採用担当者様専用アカウント＞</li>
+        <li>メールアドレス：test@com</li>
+        <li>パスワード：123456</li>
+      </ul>
+
     <% end %>
   </div>
 </div>

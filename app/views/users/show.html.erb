@@ -6,10 +6,13 @@
 
 <h3>自分のメモ一覧</h3>
 <div class="contents">
-
-    <% @memos.each do |memo| %>
-      <%= link_to memo.title, memo_path(memo.id), class: "contents__postd" %>
-  
-    <% end %>
+<%if @memos.present?%>
+  <% @memos.each do |memo| %>
+    <%= link_to memo.title, memo_path(memo), class: "contents__postd" %>
+  <% end %>
+<%else%>
+  <h2 present>まだ自分のメモには何も投稿されていません。<br>「記録する」をクリックしていただくとメモを保存する事が出来ます。
+  </h2>
+<%end%>
 </div>
 </div>  
