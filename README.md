@@ -24,7 +24,7 @@ https://mymemor.herokuapp.com/
 - デプロイ heroku
 
 # プレビュー
-![image](https://user-images.githubusercontent.com/61359618/81940917-16e7a600-9633-11ea-8868-66e9c625c755.png)
+![image](https://user-images.githubusercontent.com/61359618/82119453-a9b24d00-97b9-11ea-9f2e-c1894154d492.png)
 - ログイン後の画面となります。（メモ無しver）
 - 実際に専用ログインしていただくと、作成されたメモが保存されています。
 - urlまたはメモを保存した場合は、「記録する」をクリックしていただけますと可能です。
